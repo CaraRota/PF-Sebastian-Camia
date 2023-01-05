@@ -1,0 +1,92 @@
+.header-logo{
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua;  */
+}
+.logo{
+    width: auto;
+    height: 75px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: transform .2s;
+}
+.logo:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.menu-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+}
+.button {
+    align-self: stretch;
+    align-self: center;
+    position: relative;
+    padding: 10px;
+    border: 1px solid rgb(49, 50, 49);
+    color: rgb(40, 40, 40);
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+  }
+  .button::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    background: #333;
+    transition: transform .3s;
+  }
+  .button:hover {
+    color: #fff;
+  }
+  .button1::before,
+  .button1::after {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 100%;
+    height: 50%;
+    background: #333;
+    transform: scale(1, 0);
+    transition: transform .3s;
+  }
+  .button1::before {
+    top: 0;
+    transform-origin: left top;
+  }
+  .button1::after {
+    bottom: 0;
+    transform-origin: left bottom;
+  }
+  .button1:hover::before,
+  .button1:hover::after {
+    transform: scale(1, 1);
+  }
+.container-fotos{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.fotos{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.fotos:hover{
+    cursor: pointer;
+    transform: rotate(20deg);
+    transition: transform .5s;
+}
+.footer{
+    text-align: center;
+}
