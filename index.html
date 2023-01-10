@@ -10,28 +10,37 @@
 <body>
     <header>
         <div class="header-logo">
-            <img class="logo" src="images/logo.png">
-            <div class="menu-bar">
-                <a class="button button1" href="#">HOME</a>
-                <a class="button button1" href="files/portfolio.html">PORTFOLIO</a>
-                <a class="button button1" href="files/staff.html">STAFF</a>
-                <a class="button button1" href="files/contact.html">CONTACT US</a>
-            </div>
+            <img class="logo" src="./assets/img/logo.png" alt="Logo del sitio web">
         </div>
+        <nav>
+            <div class="menu-bar">
+                <ul>
+                    <li><a class="button button1" href="#footer">HOME</a></li>
+                    <li><a class="button button1" href="./pages/portfolio.html">PORTFOLIO</a></li>
+                    <li><a class="button button1" href="./pages/staff.html">STAFF</a></li>
+                    <li><a class="button button1" href="./pages/projects.html">PROJECTS</a></li>
+                    <li><a class="button button1" href="./pages/contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <div class="title">
-        <h1>
-            <span class="highlight">OUR TECHNOLOGY</span>
-        </h1>
-    </div>
-    <div class="container-fotos">
-        <img class="fotos" src="images/html5.png">
-        <img class="fotos" src="images/css3.png">
-        <img class="fotos" src="images/js.png">
-        <img class="fotos" src="images/python.png">
-    </div>
+    <main>
+        <section>
+            <div class="title">
+                <h1>
+                    <span class="highlight">OUR TECHNOLOGY</span>
+                </h1>
+            </div>
+                <div class="container-fotos">
+                <img class="fotos" src="./assets/img/html5.png" alt="Logo HTML5">
+                <img class="fotos" src="./assets/img/css3.png" alt="Logo CSS3">
+                <img class="fotos" src="./assets/img/js.png" alt="Logo JS">
+                <img class="fotos" src="./assets/img/python.png" alt="Logo Python">
+            </div>
+        </section>
+    </main>
     <footer>
-        <div class="footer">
+        <div id="footer" class="footer">
             <p> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> <b>Sebastian Camia</b> All Rights Reserved</p>
         </div>
     </footer>

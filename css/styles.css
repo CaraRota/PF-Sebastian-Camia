@@ -1,7 +1,11 @@
-.header-logo{
+
+header{
     display: flex;
     flex-direction: row;
-    /* background-color: aqua;  */
+    background-color:#e3def0;
+    position:sticky;
+    height: 75px;
+    border-radius: 5px;
 }
 .logo{
     width: auto;
@@ -12,29 +16,36 @@
 }
 .logo:hover{
     transform: scale(1.05);
-    cursor: pointer;
+    cursor:url(../assets/img/cursor.png), auto;
 }
-.menu-bar{
+nav{
     display: flex;
-    flex-direction: row;
     justify-content: right;
+    align-items: center;
     width: 100%;
     padding-right: 50px;
+}
+.menu-bar ul li {
+  list-style: none;
+  display: inline-block;
 }
 .button {
     align-self: stretch;
     align-self: center;
     position: relative;
     padding: 10px;
-    margin-right: 10px;
-    border: 1px rgb(49, 50, 49);
-    color: rgb(40, 40, 40);
+    border: 1px #8a77d0;
+    color: #000;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     text-align: center;
     text-decoration: none;
     transition: .3s;
+    border: double;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
   }
   .button::before {
     position: absolute;
@@ -61,10 +72,12 @@
   .button1::before {
     top: 0;
     transform-origin: left top;
+    border-top-left-radius: 10px;
   }
   .button1::after {
     bottom: 0;
     transform-origin: left bottom;
+    border-bottom-right-radius: 10px;
   }
   .button1:hover::before,
   .button1:hover::after {
