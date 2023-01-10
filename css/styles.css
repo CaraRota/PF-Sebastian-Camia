@@ -90,7 +90,7 @@ nav{
     position: relative;
 }
 .title .highlight::before{
-    background-color: #cdea11;
+    background-color: #e3def0;
     content: "";
     position: absolute;
     width: calc(100% + 4px);
@@ -101,18 +101,20 @@ nav{
     transform: rotate(-2deg);
 }
   .container-fotos{
-    background-color: blue;
     display: flex;
     flex-direction: row;
+    /* background-color: blue; */
     justify-content: center;
 }
 .fotos{
-    background-color: black;
+    background-color: #e3def0;
     width: 200px;
     height: 200px;
     padding: 5px;
     border-radius: 50%;
     transition: 0.5s;
+    margin: 30px;
+    border: double #fff;
 }
 .fotos:hover{
     cursor: pointer;
