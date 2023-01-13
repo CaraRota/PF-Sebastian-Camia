@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styles.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oui Dev</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Oui Dev - Contacto</title>
 </head>
+
 <body>
     <header>
         <div class="header-logo">
@@ -16,30 +18,58 @@
             <div class="menu-bar">
                 <ul>
                     <li><a class="button button1" href="../index.html">HOME</a></li>
-                    <li><a class="button button1" href="../pages/portfolio.html">PORTFOLIO</a></li>
-                    <li><a class="button button1" href="../pages/staff.html">STAFF</a></li>
-                    <li><a class="button button1" href="../pages/projects.html">PROJECTS</a></li>
-                    <li><a class="button button1" href="../pages/contact.html">CONTACT US</a></li>
+                    <li><a class="button button1" href="./portfolio.html">PORTFOLIO</a></li>
+                    <li><a class="button button1" href="./staff.html">STAFF</a></li>
+                    <li><a class="button button1" href="./projects.html">PROJECTS</a></li>
+                    <li><a class="button button1" href="./contact.html">CONTACT US</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <form>
-            <input type="text" placeholder="Ingrese su nombre">
-            <input type="email" placeholder="Ingrese su email">
-            <textarea placeholder="Escriba su consulta aquí"></textarea>
-            <label for="check">Acepto los terminos y condiciones</label>
+        <section>
+            <h1>CONTACT US</h1>
+            <form>
+                <div>
+                    <p>
+                        <label for="text">
+                            Name:
+                        </label>
+                    </p>
+                    <input type="text" placeholder="Jhon Smith">
+                
+                <div>
+                    <p>
+                        <label for="email">
+                            Email:
+                        </label>
+                    </p>
+                    <input type="email" placeholder="example@gmail.com">
+                </div>
+                <div>
+                    <p>
+                        <label for="textarea">
+                            Query:
+                        </label>
+                    </p>
+                    <textarea placeholder="Type your query here"></textarea>
+                </div>
+                <label for="check">I have read and accepted terms & conditions</label>
                 <input type="checkbox" id="check" name="check">
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-        </form>
- 
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <div id="footer" class="footer">
-            <p> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> <b>Sebastian Camia</b> All Rights Reserved</p>
+            <p> Copyright &copy; 2022-
+                <script>document.write(new Date().getFullYear())</script> <b>Sebastian Camia</b> All Rights Reserved
+            </p>
         </div>
     </footer>
 </body>
+
 </html>
