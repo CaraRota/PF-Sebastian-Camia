@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&display=swap');
 /* font-family: 'Newsreader', serif; */
 
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -14,11 +19,14 @@ body {
 
 header {
   display: flex;
+  position: sticky;
+  top: 5px;
   flex-direction: row;
   background-color: #E0E7E9;
-  position: sticky;
   height: 75px;
   border-radius: 10px;
+  margin: 5px;
+  z-index: 1;
 }
 
 .logo {
@@ -106,6 +114,7 @@ nav {
 }
 
 .title {
+  margin-top: 20px;
   text-align: center;
   color: #E0E7E9;
   font-family: 'Newsreader', serif;
