@@ -1,12 +1,10 @@
 /* Website Palette: Hex: 354649 / 6C7A89 / A3C6C4 / E0E7E9 */
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-/* font-family: 'Lobster', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&display=swap');
-/* font-family: 'Newsreader', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Newsreader:opsz@6..72&display=swap');
+/* font-family: 'Lato', sans-serif; -- font-family: 'Newsreader', serif; */
 
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
@@ -21,10 +19,13 @@ header {
   display: flex;
   position: sticky;
   top: 5px;
-  flex-direction: row;
-  background-color: #E0E7E9;
+  background: rgb(167, 193, 198);
+  background: linear-gradient(180deg, rgba(167, 193, 198, 1) 0%, rgba(224, 231, 233, 1) 100%);
+  box-shadow: 0 4px 10px -4px lightblue;
   height: 75px;
-  border-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 5px;
   margin: 5px;
   z-index: 100;
 }
@@ -37,6 +38,7 @@ header {
   transition: transform .2s;
 }
 
+/* CHANGE LOGO SIZE AND CURSOR ON MOUSEOVER */
 .logo:hover {
   transform: scale(1.05);
   cursor: url(../assets/img/cursor.png), auto;
@@ -55,19 +57,19 @@ nav {
   display: inline-block;
 }
 
+/* MENU BUTTONS + EFFECTS */
 .button {
   position: relative;
   padding: 10px;
   color: #000;
   font-size: 16px;
-  font-family: 'Newsreader', serif;
-  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
   text-align: center;
   text-decoration: none;
-  transition: .3s;
-  border: double;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  transition: 1s;
+  border: 1px solid;
+
 }
 
 .button::before {
@@ -80,6 +82,8 @@ nav {
 
 .button:hover {
   color: #A3C6C4;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .button1::before,
@@ -137,15 +141,14 @@ nav {
 
 .container-tech {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .tech {
   background: radial-gradient(circle, rgba(231, 213, 83, 1) 0%, rgba(53, 70, 73, 1) 81%, rgba(53, 70, 73, 1) 100%);
   width: 200px;
   height: 200px;
-  padding: 5px;
   border-radius: 50%;
   transition: 0.5s;
   margin: 30px;
@@ -158,6 +161,7 @@ nav {
   transition: transform .5s;
 }
 
+/* MAIN CONTENT OF THE WEBSITE STARTS HERE WITH THIS WRAPPER/GRID */
 .wrapper {
   display: grid;
   justify-content: center;
@@ -170,6 +174,9 @@ nav {
 }
 
 .text1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-column: 2;
   grid-row: 1;
   width: 552px;
@@ -179,6 +186,9 @@ nav {
 }
 
 .text2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-column: 1;
   grid-row: 2;
   width: 552px;
@@ -194,6 +204,7 @@ nav {
   height: 300px;
 }
 
+/* ASIDE IS USED FOR NESTING THE "GO TOP" BUTTON */
 aside {
   display: flex;
   position: sticky;
