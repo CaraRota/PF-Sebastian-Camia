@@ -157,7 +157,6 @@ nav {
 }
 
 .tech:hover {
-  cursor: pointer;
   transform: rotate(20deg);
   transition: transform .5s;
 }
