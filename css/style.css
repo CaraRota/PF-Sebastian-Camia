@@ -12,9 +12,12 @@ html {
 }
 
 body#top {
-  background: #403B4A;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E7E9BB, #403B4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  background: #403B4A;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E7E9BB, #403B4A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* #top {
@@ -38,7 +41,6 @@ header {
   height: auto;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 5px;
   margin: 5px;
   z-index: 100;
   grid-area: header;
@@ -46,7 +48,7 @@ header {
 
 .logo {
   width: auto;
-  height: 75px;
+  height: 50px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   transition: transform .2s;
@@ -179,9 +181,12 @@ header {
 
 /* MAIN CONTENT OF THE WEBSITE STARTS HERE WITH THIS WRAPPER/GRID */
 .grid-container {
-  background: #ffe259;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffa751, #ffe259);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 10px;
   max-width: 1200px;
   padding: 10px;
