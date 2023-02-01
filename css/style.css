@@ -43,12 +43,12 @@ header {
   border-top-left-radius: 10px;
   margin: 5px;
   z-index: 100;
-  grid-area: header;
+  /* grid-area: header; */
 }
 
 .logo {
   width: auto;
-  height: 50px;
+  height: 75px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   transition: transform .2s;
@@ -126,9 +126,9 @@ header {
   transform: scale(1, 1);
 }
 
-#grid-tech {
+/* #grid-tech {
   grid-area: grid-tech;
-}
+} */
 
 .title {
   margin-top: 20px;
@@ -153,14 +153,13 @@ header {
   transform: rotate(-2deg);
 }
 
-#grid-body {
+/* #grid-body {
   grid-area: grid-body;
-}
+} */
 
 .container-tech {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .tech {
@@ -251,9 +250,9 @@ aside {
   transform: translate(0, 0);
 }
 
-footer {
+/* footer {
   grid-area: footer;
-}
+} */
 
 .footer-start {
   border: none;
