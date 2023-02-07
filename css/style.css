@@ -166,6 +166,11 @@ header {
   padding: 10px;
 }
 
+.bg-effect:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+}
+
 .shadow {
   box-shadow: 0 2rem 5rem white !important;
 }
@@ -178,6 +183,42 @@ header {
   padding: 10px;
 }
 
+/* APPLY EFFECT ON HOVER TO BUTTONS AND/OR BACKGROUNDS IN BG-DARK BOOTSTRAP 5 */
+.text-bg-dark:hover {
+  color: black !important;
+  background-color: white !important;
+  transition: 0.5s;
+  border: 1px solid #000;
+}
+
+.text-bg-light {
+  border: 1px solid #000;
+}
+
+.text-bg-light:hover {
+  color: white !important;
+  background-color: #212529 !important;
+  transition: 0.5s;
+}
+
+/* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL */
+.text-mixin {
+  color: white;
+  font-weight: 600;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* BORDERS LAYOUT OF THE WEBSITE */
+.borders-mixin {
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* USE THIS CLASS TO MAKE IT UPPERCASE */
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* ASIDE IS USED FOR NESTING THE "GO TOP" BUTTON */
 aside {
   display: flex;
@@ -186,6 +227,7 @@ aside {
   justify-content: right;
 }
 
+/* GO TOP BUTTON EFFECTS AND CLASSES */
 .gotop {
   display: flex;
   justify-content: center;
@@ -194,7 +236,7 @@ aside {
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: 3px -2px teal;
-  background-color: #333;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   width: 50px;
   height: 50px;
   margin-bottom: 5px;
@@ -218,38 +260,6 @@ aside {
 .footer {
   text-align: center;
   color: #E0E7E9;
-}
-
-.text-bg-dark:hover {
-  color: black !important;
-  background-color: white !important;
-  transition: 0.5s;
-  border: 1px solid #000;
-}
-
-.text-bg-light {
-  border: 1px solid #000;
-}
-
-.text-bg-light:hover {
-  color: white !important;
-  background-color: #212529 !important;
-  transition: 0.5s;
-}
-
-.text-mixin {
-  color: white;
-  font-weight: 600;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.borders-mixin {
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.uppercase {
-  text-transform: uppercase;
 }
 
 .contact-btn-reset .contact-btn-submit {
@@ -286,5 +296,10 @@ aside {
   .tech {
     width: 150px;
     height: 150px;
+  }
+
+  /* ADDED MARGIN TO SEPARATE BOTH TEXTS FROM EACH OTHERS */
+  .responsive-spacing {
+    margin-bottom: 3rem;
   }
 }
