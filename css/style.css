@@ -171,8 +171,8 @@ header {
   transition: 0.5s;
 }
 
-.shadow {
-  box-shadow: 0 2rem 5rem white !important;
+.shadows {
+  box-shadow: 0 2rem 5rem white;
 }
 
 .grid-text {
@@ -262,6 +262,11 @@ aside {
   color: #E0E7E9;
 }
 
+/* REMOVE BG ON BOOTSTRAP CARD HEADER */
+.card-header{
+  background-color: transparent;
+}
+
 .contact-btn-reset .contact-btn-submit {
   background-color: white;
   color: black;
@@ -306,7 +311,7 @@ aside {
 
 /* MAKE HIGHLIGHT TEXT RESPONSIVE AT 471px width */
 @media (max-width: 485px) {
-  .title-responsive{
+  .title-responsive {
     display: inline-block;
   }
 }
