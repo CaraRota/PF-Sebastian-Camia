@@ -41,11 +41,11 @@ header {
 }
 
 /* MENU BUTTONS + EFFECTS */
-.nav-link-colors {
+.nav-link {
   color: #0b4fd6;
 }
 
-.nav-link-colors:hover {
+.nav-link:hover {
   color: #fff !important;
   transition: 1s;
 }
