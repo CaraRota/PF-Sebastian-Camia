@@ -1,4 +1,3 @@
-/* Website Palette: Hex: 354649 / 6C7A89 / A3C6C4 / E0E7E9 */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Newsreader:opsz@6..72&display=swap');
 /* font-family: 'Lato', sans-serif; -- font-family: 'Newsreader', serif; */
 
@@ -42,12 +41,12 @@ header {
 }
 
 /* MENU BUTTONS + EFFECTS */
-.nav-link {
-  color: #0d6efd !important;
+.nav-link-colors {
+  color: #0d6efd;
 }
 
-.nav-link:hover {
-  color: #fff !important;
+.nav-link-colors:hover {
+  color: #fff;
   transition: 1s;
 }
 
@@ -133,7 +132,6 @@ header {
 .container-tech {
   display: flex;
   justify-content: center;
-  flex-direction: row;
 }
 
 .tech {
@@ -172,9 +170,10 @@ header {
 }
 
 .shadows {
-  box-shadow: 0 2rem 5rem white;
+  box-shadow: 0 2rem 5rem #fff;
 }
 
+/* USING FLEXBOX SOMEWHERE */
 .grid-text {
   display: flex;
   justify-content: center;
@@ -183,38 +182,45 @@ header {
   padding: 10px;
 }
 
-/* APPLY EFFECT ON HOVER TO BUTTONS AND/OR BACKGROUNDS IN BG-DARK BOOTSTRAP 5 */
-.text-bg-dark:hover {
-  color: black !important;
-  background-color: white !important;
+/* APPLY EFFECT ON HOVER TO BUTTONS AND/OR BACKGROUNDS (revisit this with SASS later on)  */
+.text-bg-black {
+  color: #fff;
+  background-color: #000;
+}
+
+.text-bg-black:hover {
+  color: #000;
+  background-color: #fff;
   transition: 0.5s;
   border: 1px solid #000;
 }
 
-.text-bg-light {
+.text-bg-white {
+  background-color: #fff;
+  color: #000;
   border: 1px solid #000;
 }
 
-.text-bg-light:hover {
-  color: white !important;
-  background-color: #212529 !important;
+.text-bg-white:hover {
+  color: #fff;
+  background-color: #212529;
   transition: 0.5s;
 }
 
-/* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL */
+/* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL (revisit this with SASS later on) */
 .text-mixin {
-  color: white;
+  color: #fff;
   font-weight: 600;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* BORDERS LAYOUT OF THE WEBSITE */
+/* BORDERS LAYOUT OF THE WEBSITE (revisit this with SASS later on) */
 .borders-mixin {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-/* USE THIS CLASS TO MAKE IT UPPERCASE */
+/* USE THIS CLASS TO MAKE IT UPPERCASE (revisit this with SASS later on) */
 .uppercase {
   text-transform: uppercase;
 }
@@ -263,7 +269,7 @@ aside {
 }
 
 /* REMOVE BG ON BOOTSTRAP CARD HEADER */
-.card-header{
+.card-header {
   background-color: transparent;
 }
 
@@ -272,7 +278,7 @@ aside {
   color: black;
 }
 
-/* Responsive layout for Tech (2Col/2Row)*/
+/* Responsive layout for Tech using GRIDS (2Col/2Row)*/
 @media (max-width: 900px) {
   .container-tech {
     display: grid;
@@ -303,13 +309,13 @@ aside {
     height: 150px;
   }
 
-  /* ADDED MARGIN TO SEPARATE BOTH TEXTS FROM EACH OTHERS */
+  /* ADDED MARGIN TO SEPARATE BOTH TEXTS FROM EACH OTHERS WHILE IN MOBILES */
   .responsive-spacing {
     margin-bottom: 3rem;
   }
 }
 
-/* MAKE HIGHLIGHT TEXT RESPONSIVE AT 471px width */
+/* MAKE HIGHLIGHT TEXT RESPONSIVE AT 485px WIDTH */
 @media (max-width: 485px) {
   .title-responsive {
     display: inline-block;
