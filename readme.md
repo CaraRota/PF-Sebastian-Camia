@@ -8,5 +8,5 @@ ToDos:
 6. Revisit footer [x]
 7. Fix class container-tech [x]
 8. Center Navbar on mobile version (collapsed navbar) [x]
-9. Remove !important from CSS stylesheet []
+9. Remove !important from CSS stylesheet [x]
 <!-- RELEASE OF SECOND HOMEWORK -->
