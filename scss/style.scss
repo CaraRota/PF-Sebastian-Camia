@@ -22,26 +22,26 @@ header {
     z-index: 100;
 }
 
+/* CHANGE LOGO SIZE AND CURSOR ON MOUSEOVER */
 .logo {
     width: auto;
     height: 75px;
     transition: transform .2s;
-}
 
-/* CHANGE LOGO SIZE AND CURSOR ON MOUSEOVER */
-.logo:hover {
-    transform: scale(1.05);
-    cursor: url(../assets/img/cursor.png), auto;
+    &:hover {
+        transform: scale(1.05);
+        cursor: url(../assets/img/cursor.png), auto;
+    }
 }
 
 /* MENU BUTTONS + EFFECTS */
 .nav-link {
     color: #0b4fd6;
-}
 
-.nav-link:hover {
-    color: #fff !important;
-    transition: 1s;
+    &:hover {
+        color: #fff !important;
+        transition: 1s;
+    }
 }
 
 .button {
@@ -54,50 +54,53 @@ header {
     text-decoration: none;
     transition: 1s;
     border: 2px solid #A3C6C4;
+
+    &:before {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        background: #edecf0;
+        transition: transform .3s;
+    }
+
+    &:hover {
+        color: #A3C6C4;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
 }
 
-.button::before {
-    position: absolute;
-    z-index: -1;
-    content: '';
-    background: #edecf0;
-    transition: transform .3s;
-}
+.button1 {
 
-.button:hover {
-    color: #A3C6C4;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
+    &::before,
+    &::after {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        content: '';
+        width: 100%;
+        height: 50%;
+        background: #1c1437;
+        transform: scale(1, 0);
+        transition: transform .3s;
+    }
 
-.button1::before,
-.button1::after {
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    content: '';
-    width: 100%;
-    height: 50%;
-    background: #1c1437;
-    transform: scale(1, 0);
-    transition: transform .3s;
-}
+    &::before {
+        top: 0;
+        transform-origin: left top;
+        border-top-left-radius: 10px;
+    }
 
-.button1::before {
-    top: 0;
-    transform-origin: left top;
-    border-top-left-radius: 10px;
-}
+    &::after {
+        bottom: 0;
+        transform-origin: left bottom;
+        border-bottom-right-radius: 10px;
+    }
 
-.button1::after {
-    bottom: 0;
-    transform-origin: left bottom;
-    border-bottom-right-radius: 10px;
-}
-
-.button1:hover::before,
-.button1:hover::after {
-    transform: scale(1, 1);
+    &:hover::before,
+    &:hover::after {
+        transform: scale(1, 1);
+    }
 }
 
 .title {
@@ -137,11 +140,11 @@ header {
     margin: 10px;
     padding: 10px;
     border: double rgba(53, 70, 73, 1) 10px;
-}
 
-.tech:hover {
-    transform: rotate(20deg);
-    transition: transform .5s;
+    &:hover {
+        transform: rotate(20deg);
+        transition: transform .5s;
+    }
 }
 
 /* MAIN CONTENT OF THE WEBSITE STARTS HERE WITH THIS WRAPPER/GRID */
@@ -180,25 +183,25 @@ header {
 .text-bg-black {
     color: #fff;
     background-color: #212529;
-}
 
-.text-bg-black:hover {
-    color: #212529;
-    background-color: #fff;
-    transition: 0.5s;
-    border: 1px solid #212529;
+    &:hover {
+        color: #212529;
+        background-color: #fff;
+        transition: 0.5s;
+        border: 1px solid #212529;
+    }
 }
 
 .text-bg-white {
     background-color: #fff;
     color: #212529;
     border: 1px solid #212529;
-}
 
-.text-bg-white:hover {
-    color: #fff;
-    background-color: #212529;
-    transition: 0.5s;
+    &:hover {
+        color: #fff;
+        background-color: #212529;
+        transition: 0.5s;
+    }
 }
 
 /* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL (revisit this with SASS later on) */
@@ -209,9 +212,14 @@ header {
 }
 
 /* BORDERS LAYOUT OF THE WEBSITE (revisit this with SASS later on) */
+
+@mixin borders-mixin($top-left, $bottom-right){
+    border-top-left-radius: $top-left;
+    border-bottom-right-radius: $bottom-right;
+}
+
 .borders-mixin {
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    @include borders-mixin(10px, 10px);
 }
 
 /* USE THIS CLASS TO MAKE IT UPPERCASE (revisit this with SASS later on) */

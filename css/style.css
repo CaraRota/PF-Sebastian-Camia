@@ -9,6 +9,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  min-height: 100vh;
+}
+
 body#top {
   background: linear-gradient(#354649, rgb(122, 121, 121), #fff);
 }
@@ -27,13 +31,12 @@ header {
   z-index: 100;
 }
 
+/* CHANGE LOGO SIZE AND CURSOR ON MOUSEOVER */
 .logo {
   width: auto;
   height: 75px;
   transition: transform 0.2s;
 }
-
-/* CHANGE LOGO SIZE AND CURSOR ON MOUSEOVER */
 .logo:hover {
   transform: scale(1.05);
   cursor: url(../assets/img/cursor.png), auto;
@@ -43,7 +46,6 @@ header {
 .nav-link {
   color: #0b4fd6;
 }
-
 .nav-link:hover {
   color: #fff !important;
   transition: 1s;
@@ -60,23 +62,20 @@ header {
   transition: 1s;
   border: 2px solid #A3C6C4;
 }
-
-.button::before {
+.button:before {
   position: absolute;
   z-index: -1;
   content: "";
   background: #edecf0;
   transition: transform 0.3s;
 }
-
 .button:hover {
   color: #A3C6C4;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-.button1::before,
-.button1::after {
+.button1::before, .button1::after {
   position: absolute;
   left: 0;
   z-index: -1;
@@ -87,21 +86,17 @@ header {
   transform: scale(1, 0);
   transition: transform 0.3s;
 }
-
 .button1::before {
   top: 0;
   transform-origin: left top;
   border-top-left-radius: 10px;
 }
-
 .button1::after {
   bottom: 0;
   transform-origin: left bottom;
   border-bottom-right-radius: 10px;
 }
-
-.button1:hover::before,
-.button1:hover::after {
+.button1:hover::before, .button1:hover::after {
   transform: scale(1, 1);
 }
 
@@ -143,7 +138,6 @@ header {
   padding: 10px;
   border: double rgb(53, 70, 73) 10px;
 }
-
 .tech:hover {
   transform: rotate(20deg);
   transition: transform 0.5s;
@@ -185,7 +179,6 @@ header {
   color: #fff;
   background-color: #212529;
 }
-
 .text-bg-black:hover {
   color: #212529;
   background-color: #fff;
@@ -198,7 +191,6 @@ header {
   color: #212529;
   border: 1px solid #212529;
 }
-
 .text-bg-white:hover {
   color: #fff;
   background-color: #212529;
