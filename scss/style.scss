@@ -1,22 +1,52 @@
+// IMPORTING FONTS FROM GOOGLE
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Newsreader:opsz@6..72&display=swap');
+// IMPORTING PARTIALS
 @import "globals";
 
+// DECLARING DOCUMENTS VARIABLES
 $font-lato: 'Lato', sans-serif;
 $font-newsreader: 'Newsreader', serif;
+// CUSTOMIZE BOX SHADOWS IN THE WEBSITE
+$box-shadows: 0 2rem 5rem #fff;
+// CUSTOMIZE SITE BACKGROUND COLOR
+$site-bg-color: linear-gradient(#354649, rgb(122, 121, 121), #fff);
+
+// DECLARING DOCUMENTS MIXINS
+
+@mixin bg-header() {
+    // CUSTOMIZE HEADER COLOR
+    background: rgb(167, 193, 198);
+    background: linear-gradient(180deg, rgba(167, 193, 198, 1) 0%, rgba(224, 231, 233, 1) 100%);
+}
+
+@mixin flex-prop($align) {
+    display: flex;
+    justify-content: $align;
+}
+
+@mixin text-mixin() {
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* BORDERS LAYOUT OF THE WEBSITE */
+@mixin borders-mixin($top-left, $bottom-right) {
+    border-top-left-radius: $top-left;
+    border-bottom-right-radius: $bottom-right;
+}
 
 body#top {
-    background: linear-gradient(#354649, rgb(122, 121, 121), #fff);
+    background: $site-bg-color;
 }
 
 header {
     position: sticky;
     top: 5px;
-    background: rgb(167, 193, 198);
-    background: linear-gradient(180deg, rgba(167, 193, 198, 1) 0%, rgba(224, 231, 233, 1) 100%);
+    @include bg-header();
     box-shadow: 0 4px 10px -4px lightblue;
     height: auto;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 10px;
+    @include borders-mixin(10px, 10px);
     border-bottom-left-radius: 3px;
     margin: 5px;
     z-index: 100;
@@ -55,23 +85,6 @@ header {
     transition: 1s;
     border: 2px solid #A3C6C4;
 
-    &:before {
-        position: absolute;
-        z-index: -1;
-        content: '';
-        background: #edecf0;
-        transition: transform .3s;
-    }
-
-    &:hover {
-        color: #A3C6C4;
-        border-top-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-}
-
-.button1 {
-
     &::before,
     &::after {
         position: absolute;
@@ -108,27 +121,26 @@ header {
     text-align: center;
     color: #E0E7E9;
     font-family: $font-newsreader;
-}
 
-.title .highlight {
-    position: relative;
-}
+    & .highlight {
+        position: relative;
 
-.title .highlight::before {
-    background-color: #0b4fd6;
-    content: "";
-    position: absolute;
-    width: calc(100% + 4px);
-    height: 60%;
-    left: -2px;
-    bottom: 0;
-    z-index: -1;
-    transform: rotate(-2deg);
+        &::before {
+            background-color: #0b4fd6;
+            content: "";
+            position: absolute;
+            width: calc(100% + 4px);
+            height: 60%;
+            left: -2px;
+            bottom: 0;
+            z-index: -1;
+            transform: rotate(-2deg);
+        }
+    }
 }
 
 .container-tech {
-    display: flex;
-    justify-content: center;
+    @include flex-prop(center);
 }
 
 .tech {
@@ -155,8 +167,7 @@ header {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #3A6073, #16222A);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    @include borders-mixin(10px, 10px);
     max-width: 1200px;
     padding: 10px;
 }
@@ -167,13 +178,12 @@ header {
 }
 
 .shadows {
-    box-shadow: 0 2rem 5rem #fff;
+    box-shadow: $box-shadows;
 }
 
 /* USING FLEXBOX SOMEWHERE */
 .grid-text {
-    display: flex;
-    justify-content: center;
+    @include flex-prop(center);
     align-items: center;
     text-align: justify;
     padding: 10px;
@@ -204,45 +214,33 @@ header {
     }
 }
 
-/* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL (revisit this with SASS later on) */
+/* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL */
 .text-mixin {
-    color: #fff;
-    font-weight: 600;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-/* BORDERS LAYOUT OF THE WEBSITE (revisit this with SASS later on) */
-
-@mixin borders-mixin($top-left, $bottom-right){
-    border-top-left-radius: $top-left;
-    border-bottom-right-radius: $bottom-right;
+    @include text-mixin();
 }
 
 .borders-mixin {
     @include borders-mixin(10px, 10px);
 }
 
-/* USE THIS CLASS TO MAKE IT UPPERCASE (revisit this with SASS later on) */
+/* USE THIS CLASS TO MAKE IT UPPERCASE */
 .uppercase {
     text-transform: uppercase;
 }
 
 /* ASIDE IS USED FOR NESTING THE "GO TOP" BUTTON */
 aside {
-    display: flex;
+    @include flex-prop(right);
     position: sticky;
     bottom: 5px;
-    justify-content: right;
 }
 
 /* GO TOP BUTTON EFFECTS AND CLASSES */
 .gotop {
-    display: flex;
-    justify-content: center;
+    @include flex-prop(center);
     align-items: center;
     border: #000;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    @include borders-mixin(5px, 5px);
     box-shadow: 3px -2px teal;
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     width: 50px;
@@ -254,10 +252,10 @@ aside {
 .gotop {
     transform: translate(-5%, -5%);
     transition: transform 0.2s;
-}
 
-.gotop:hover {
-    transform: translate(0, 0);
+    &:hover {
+        transform: translate(0, 0);
+    }
 }
 
 .footer-start {

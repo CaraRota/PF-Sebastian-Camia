@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
 }
 
+/* BORDERS LAYOUT OF THE WEBSITE */
 body#top {
   background: linear-gradient(#354649, rgb(122, 121, 121), #fff);
 }
@@ -24,8 +25,8 @@ header {
   background: linear-gradient(180deg, rgb(167, 193, 198) 0%, rgb(224, 231, 233) 100%);
   box-shadow: 0 4px 10px -4px lightblue;
   height: auto;
-  border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   border-bottom-left-radius: 3px;
   margin: 5px;
   z-index: 100;
@@ -62,20 +63,7 @@ header {
   transition: 1s;
   border: 2px solid #A3C6C4;
 }
-.button:before {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  background: #edecf0;
-  transition: transform 0.3s;
-}
-.button:hover {
-  color: #A3C6C4;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.button1::before, .button1::after {
+.button::before, .button::after {
   position: absolute;
   left: 0;
   z-index: -1;
@@ -86,17 +74,17 @@ header {
   transform: scale(1, 0);
   transition: transform 0.3s;
 }
-.button1::before {
+.button::before {
   top: 0;
   transform-origin: left top;
   border-top-left-radius: 10px;
 }
-.button1::after {
+.button::after {
   bottom: 0;
   transform-origin: left bottom;
   border-bottom-right-radius: 10px;
 }
-.button1:hover::before, .button1:hover::after {
+.button:hover::before, .button:hover::after {
   transform: scale(1, 1);
 }
 
@@ -106,11 +94,9 @@ header {
   color: #E0E7E9;
   font-family: "Newsreader", serif;
 }
-
 .title .highlight {
   position: relative;
 }
-
 .title .highlight::before {
   background-color: #0b4fd6;
   content: "";
@@ -197,20 +183,19 @@ header {
   transition: 0.5s;
 }
 
-/* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL (revisit this with SASS later on) */
+/* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL */
 .text-mixin {
   color: #fff;
   font-weight: 600;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-/* BORDERS LAYOUT OF THE WEBSITE (revisit this with SASS later on) */
 .borders-mixin {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-/* USE THIS CLASS TO MAKE IT UPPERCASE (revisit this with SASS later on) */
+/* USE THIS CLASS TO MAKE IT UPPERCASE */
 .uppercase {
   text-transform: uppercase;
 }
@@ -218,9 +203,9 @@ header {
 /* ASIDE IS USED FOR NESTING THE "GO TOP" BUTTON */
 aside {
   display: flex;
+  justify-content: right;
   position: sticky;
   bottom: 5px;
-  justify-content: right;
 }
 
 /* GO TOP BUTTON EFFECTS AND CLASSES */
@@ -243,7 +228,6 @@ aside {
   transform: translate(-5%, -5%);
   transition: transform 0.2s;
 }
-
 .gotop:hover {
   transform: translate(0, 0);
 }
