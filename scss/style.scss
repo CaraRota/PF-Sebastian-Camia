@@ -1,14 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Newsreader:opsz@6..72&display=swap');
-/* font-family: 'Lato', sans-serif; -- font-family: 'Newsreader', serif; */
+@import "globals";
 
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+$font-lato: 'Lato', sans-serif;
+$font-newsreader: 'Newsreader', serif;
 
 body#top {
     background: linear-gradient(#354649, rgb(122, 121, 121), #fff);
@@ -54,7 +48,7 @@ header {
     position: relative;
     padding: 10px;
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-lato;
     font-weight: 900;
     text-align: center;
     text-decoration: none;
@@ -110,7 +104,7 @@ header {
     margin-top: 20px;
     text-align: center;
     color: #E0E7E9;
-    font-family: 'Newsreader', serif;
+    font-family: $font-newsreader;
 }
 
 .title .highlight {
