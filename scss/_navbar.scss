@@ -1,0 +1,102 @@
+@import "mixins";
+@import "globals";
+@import "fonts";
+
+// CUSTOMIZE HEADER
+$header: (
+    // CUSTOMIZE BACKGROUND FOR OLDER BROWSERS
+    bg-old: rgb(167, 193, 198),
+    // CUSTOMIZE BACKGROUND FOR NEW BROWSERS
+    bg-new: linear-gradient(180deg, rgba(167, 193, 198, 1) 0%, rgba(224, 231, 233, 1) 100%),
+    header-shadow: 0 4px 10px -4px lightblue,
+    top-margin: 5px,
+);
+
+// CUSTOMIZE HEADER BUTTONS
+$header-btn-color: (
+    // CHANGE THIS VALUES FOR NAVBAR BUTTONS
+    text-color: #0b4fd6,
+    border-btn: 2px solid #A3C6C4,
+    transition: 1s,
+    bg-color: transparent,
+);
+
+$header-btn-after: (
+    // CHANGE THIS VALUES FOR NAVBAR BUTTONS ON MOUSEOVER
+    text-color: transparent,
+    border-btn: none,
+    transition: transform .3s,
+    bg-color: #1c1437,
+);
+
+header {
+    position: sticky;
+    top: map-get($map: $header, $key: top-margin);
+    background: map-get($map: $header, $key: bg-old);
+    background-image: map-get($map: $header, $key: bg-new);
+    box-shadow: map-get($map: $header, $key: header-shadow);
+    height: auto;
+    @include borders-mixin(10px, 10px);
+    border-bottom-left-radius: 3px;
+    margin: 5px;
+    z-index: 100;
+}
+
+/* CHANGE LOGO SIZE AND CURSOR ON MOUSEOVER */
+.logo {
+    width: auto;
+    height: 75px;
+    transition: transform .2s;
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: url(../assets/img/cursor.png), auto;
+    }
+}
+
+/* MENU BUTTONS + EFFECTS */
+.button {
+    @include header-buttons(map-get($map: $header-btn-color, $key: text-color), map-get($map: $header-btn-color, $key: border-btn), map-get($map: $header-btn-color, $key: transition), map-get($map: $header-btn-color, $key: bg-color));
+    position: relative;
+    padding: 10px;
+    font-size: 16px;
+    font-family: $font-lato;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+
+    &::before,
+    &::after {
+        @include header-buttons(map-get($map: $header-btn-after, $key: text-color), map-get($map: $header-btn-after, $key: border-btn), map-get($map: $header-btn-after, $key: transition), map-get($map: $header-btn-after, $key: bg-color));
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        content: '';
+        width: 100%;
+        height: 50%;
+        transform: scale(1, 0);
+    }
+
+    &:hover {
+        color: #fff !important;
+        transition: 1s;
+        @include borders-mixin(10px, 10px);
+    }
+
+    &::before {
+        top: 0;
+        transform-origin: left top;
+        border-top-left-radius: 10px;
+    }
+
+    &::after {
+        bottom: 0;
+        transform-origin: left bottom;
+        border-bottom-right-radius: 10px;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        transform: scale(1, 1);
+    }
+}

@@ -1,0 +1,25 @@
+// DECLARING DOCUMENTS MIXINS
+@mixin flex-prop($align) {
+    display: flex;
+    justify-content: $align;
+}
+
+@mixin text-mixin() {
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* BORDERS LAYOUT OF THE WEBSITE (ADDED ARGS BECAUSE NOT EVERY BORDER HAS THE SAME PX)*/
+@mixin borders-mixin($top-left, $bottom-right) {
+    border-top-left-radius: $top-left;
+    border-bottom-right-radius: $bottom-right;
+}
+
+// MIXINS FOR HEADER BUTTONS DO ***NOT*** TOUCH THIS
+@mixin header-buttons($color, $border, $transition, $bg-color) {
+    color: $color;
+    border: $border;
+    background: $bg-color;
+    transition: $transition;
+}

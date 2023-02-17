@@ -2,118 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Newsreader:opsz@6..72&display=swap');
 // IMPORTING PARTIALS
 @import "globals";
+@import "navbar";
+@import "mixins";
+@import "fonts";
 
-// DECLARING DOCUMENTS VARIABLES
-$font-lato: 'Lato', sans-serif;
-$font-newsreader: 'Newsreader', serif;
 // CUSTOMIZE BOX SHADOWS IN THE WEBSITE
 $box-shadows: 0 2rem 5rem #fff;
 // CUSTOMIZE SITE BACKGROUND COLOR
 $site-bg-color: linear-gradient(#354649, rgb(122, 121, 121), #fff);
 
-// DECLARING DOCUMENTS MIXINS
-
-@mixin bg-header() {
-    // CUSTOMIZE HEADER COLOR
-    background: rgb(167, 193, 198);
-    background: linear-gradient(180deg, rgba(167, 193, 198, 1) 0%, rgba(224, 231, 233, 1) 100%);
-}
-
-@mixin flex-prop($align) {
-    display: flex;
-    justify-content: $align;
-}
-
-@mixin text-mixin() {
-    color: #fff;
-    font-weight: 600;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-/* BORDERS LAYOUT OF THE WEBSITE */
-@mixin borders-mixin($top-left, $bottom-right) {
-    border-top-left-radius: $top-left;
-    border-bottom-right-radius: $bottom-right;
-}
-
 body#top {
     background: $site-bg-color;
-}
-
-header {
-    position: sticky;
-    top: 5px;
-    @include bg-header();
-    box-shadow: 0 4px 10px -4px lightblue;
-    height: auto;
-    @include borders-mixin(10px, 10px);
-    border-bottom-left-radius: 3px;
-    margin: 5px;
-    z-index: 100;
-}
-
-/* CHANGE LOGO SIZE AND CURSOR ON MOUSEOVER */
-.logo {
-    width: auto;
-    height: 75px;
-    transition: transform .2s;
-
-    &:hover {
-        transform: scale(1.05);
-        cursor: url(../assets/img/cursor.png), auto;
-    }
-}
-
-/* MENU BUTTONS + EFFECTS */
-.nav-link {
-    color: #0b4fd6;
-
-    &:hover {
-        color: #fff !important;
-        transition: 1s;
-    }
-}
-
-.button {
-    position: relative;
-    padding: 10px;
-    font-size: 16px;
-    font-family: $font-lato;
-    font-weight: 900;
-    text-align: center;
-    text-decoration: none;
-    transition: 1s;
-    border: 2px solid #A3C6C4;
-
-    &::before,
-    &::after {
-        position: absolute;
-        left: 0;
-        z-index: -1;
-        content: '';
-        width: 100%;
-        height: 50%;
-        background: #1c1437;
-        transform: scale(1, 0);
-        transition: transform .3s;
-    }
-
-    &::before {
-        top: 0;
-        transform-origin: left top;
-        border-top-left-radius: 10px;
-    }
-
-    &::after {
-        bottom: 0;
-        transform-origin: left bottom;
-        border-bottom-right-radius: 10px;
-    }
-
-    &:hover::before,
-    &:hover::after {
-        transform: scale(1, 1);
-    }
 }
 
 .title {
