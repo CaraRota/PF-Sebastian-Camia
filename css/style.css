@@ -106,10 +106,11 @@ body#top {
 }
 
 .title {
+  color: #E0E7E9;
+  font-weight: 400;
+  font-family: "Newsreader", serif;
   margin-top: 20px;
   text-align: center;
-  color: #E0E7E9;
-  font-family: "Newsreader", serif;
 }
 .title .highlight {
   position: relative;
@@ -198,13 +199,6 @@ body#top {
   color: #fff;
   background-color: #212529;
   transition: 0.5s;
-}
-
-/* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL */
-.text-mixin {
-  color: #fff;
-  font-weight: 600;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .borders-mixin {

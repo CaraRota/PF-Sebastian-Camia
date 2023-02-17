@@ -10,22 +10,28 @@
 $box-shadows: 0 2rem 5rem #fff;
 // CUSTOMIZE SITE BACKGROUND COLOR
 $site-bg-color: linear-gradient(#354649, rgb(122, 121, 121), #fff);
+// CUSTOMIZE TITLE OF THE WEBSITE
+$title-highlight-color: #0b4fd6;
+$title-mixin: (
+    color: #E0E7E9,
+    font-weight: 400,
+    font-family: $font-newsreader
+);
 
 body#top {
     background: $site-bg-color;
 }
 
 .title {
+    @include text-mixin(map-get($map: $title-mixin, $key: color), map-get($map: $title-mixin, $key: font-weight), map-get($map: $title-mixin, $key: font-family));
     margin-top: 20px;
     text-align: center;
-    color: #E0E7E9;
-    font-family: $font-newsreader;
 
     & .highlight {
         position: relative;
 
         &::before {
-            background-color: #0b4fd6;
+            background-color: $title-highlight-color;
             content: "";
             position: absolute;
             width: calc(100% + 4px);
@@ -111,11 +117,6 @@ body#top {
         background-color: #212529;
         transition: 0.5s;
     }
-}
-
-/* A LITTLE TEXT MIXIN TO MAKE THE WEBSITE LOOK SIMILAR OVERALL */
-.text-mixin {
-    @include text-mixin();
 }
 
 .borders-mixin {

@@ -4,10 +4,10 @@
     justify-content: $align;
 }
 
-@mixin text-mixin() {
-    color: #fff;
-    font-weight: 600;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+@mixin text-mixin($color, $font-weight, $font-fam) {
+    color: $color;
+    font-weight: $font-weight;
+    font-family: $font-fam;
 }
 
 /* BORDERS LAYOUT OF THE WEBSITE (ADDED ARGS BECAUSE NOT EVERY BORDER HAS THE SAME PX)*/
