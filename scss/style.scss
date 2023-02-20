@@ -173,7 +173,16 @@ aside {
     color: black;
 }
 
-.offcanvas-portfolio-images{
+.portfolio-images {
+    @include borders-mixin(10px, 10px);
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 1s;
+    }
+}
+
+.offcanvas-portfolio-logos {
     @include flex-prop(center);
     align-items: center;
 }
