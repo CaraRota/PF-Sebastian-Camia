@@ -13,7 +13,8 @@ $header: (
 );
 
 // CUSTOMIZE HEADER BUTTONS
-$header-btn-color: (
+
+$navbar-btn-color: (
     // CHANGE THIS VALUES FOR NAVBAR BUTTONS
     text-color: #0b4fd6,
     border-btn: 2px solid #A3C6C4,
@@ -21,7 +22,7 @@ $header-btn-color: (
     bg-color: transparent,
 );
 
-$header-btn-after: (
+$navbar-btn-after: (
     // CHANGE THIS VALUES FOR NAVBAR BUTTONS ON MOUSEOVER
     text-color: transparent,
     border-btn: none,
@@ -56,7 +57,7 @@ header {
 
 /* MENU BUTTONS + EFFECTS */
 .button {
-    @include header-buttons(map-get($map: $header-btn-color, $key: text-color), map-get($map: $header-btn-color, $key: border-btn), map-get($map: $header-btn-color, $key: transition), map-get($map: $header-btn-color, $key: bg-color));
+    @include navbar-buttons(map-get($map: $navbar-btn-color, $key: text-color), map-get($map: $navbar-btn-color, $key: border-btn), map-get($map: $navbar-btn-color, $key: transition), map-get($map: $navbar-btn-color, $key: bg-color));
     position: relative;
     padding: 10px;
     font-size: 16px;
@@ -67,7 +68,7 @@ header {
 
     &::before,
     &::after {
-        @include header-buttons(map-get($map: $header-btn-after, $key: text-color), map-get($map: $header-btn-after, $key: border-btn), map-get($map: $header-btn-after, $key: transition), map-get($map: $header-btn-after, $key: bg-color));
+        @include navbar-buttons(map-get($map: $navbar-btn-after, $key: text-color), map-get($map: $navbar-btn-after, $key: border-btn), map-get($map: $navbar-btn-after, $key: transition), map-get($map: $navbar-btn-after, $key: bg-color));
         position: absolute;
         left: 0;
         z-index: -1;

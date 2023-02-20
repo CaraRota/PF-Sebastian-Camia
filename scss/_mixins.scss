@@ -17,7 +17,7 @@
 }
 
 // MIXINS FOR HEADER BUTTONS DO ***NOT*** TOUCH THIS
-@mixin header-buttons($color, $border, $transition, $bg-color) {
+@mixin navbar-buttons($color, $border, $transition, $bg-color) {
     color: $color;
     border: $border;
     background: $bg-color;

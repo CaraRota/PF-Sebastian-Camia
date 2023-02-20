@@ -258,6 +258,12 @@ aside {
   color: black;
 }
 
+.offcanvas-portfolio-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Responsive layout for Tech using GRIDS (2Col/2Row)*/
 @media (max-width: 900px) {
   .container-tech {
