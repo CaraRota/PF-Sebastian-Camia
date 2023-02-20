@@ -175,8 +175,6 @@ aside {
 
 .portfolio-images {
     @include borders-mixin(10px, 10px);
-    max-width: 250px;
-    height: 250px;
 
     &:hover {
         transform: scale(1.1);
