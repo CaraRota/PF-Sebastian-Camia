@@ -261,10 +261,36 @@ aside {
 .portfolio-images {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  transition: all 0.5s ease;
 }
 .portfolio-images:hover {
-  transform: scale(1.1);
-  transition: 1s;
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  /* center overlay text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay h3 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.overlay_0 {
+  left: 0;
+  top: 0;
+  padding: 0.5rem;
+  margin: 4px;
+  background: #0b4fd6;
+}
+
+.image_wrapper {
+  position: relative;
 }
 
 .offcanvas-portfolio-logos {

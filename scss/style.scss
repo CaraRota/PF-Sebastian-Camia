@@ -175,12 +175,44 @@ aside {
 
 .portfolio-images {
     @include borders-mixin(10px, 10px);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
     &:hover {
-        transform: scale(1.1);
-        transition: 1s;
+        transform: scale(1.05);
         @extend .shadows;
     }
+}
+
+.overlay {
+    position: absolute;
+
+    /* center overlay text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & h3 {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0;
+    }
+}
+
+.overlay_0 {
+    left: 0;
+    top: 0;
+    padding: .5rem;
+    margin: 4px;
+    background: $title-highlight-color;
+}
+
+.image_wrapper {
+    position: relative;
 }
 
 .offcanvas-portfolio-logos {
