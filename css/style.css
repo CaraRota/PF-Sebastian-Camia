@@ -292,6 +292,7 @@ aside {
   background: black;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  box-shadow: 1px 1px 5px #000;
 }
 
 .image_wrapper {
