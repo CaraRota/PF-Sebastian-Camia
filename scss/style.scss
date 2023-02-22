@@ -17,6 +17,7 @@ $title-mixin: (
     font-weight: 400,
     font-family: $font-newsreader
 );
+$tech-bg: radial-gradient(circle, rgba(231, 213, 83, 1) 0%, rgba(53, 70, 73, 1) 81%, rgba(53, 70, 73, 1) 100%);
 
 body#top {
     background-image: $site-bg-color;
@@ -49,7 +50,7 @@ body#top {
 }
 
 .tech {
-    background: radial-gradient(circle, rgba(231, 213, 83, 1) 0%, rgba(53, 70, 73, 1) 81%, rgba(53, 70, 73, 1) 100%);
+    background: $tech-bg;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -89,7 +90,6 @@ body#top {
 /* USING FLEXBOX SOMEWHERE */
 .grid-text {
     @include flex-prop(center);
-    align-items: center;
     text-align: justify;
     padding: 10px;
 }
@@ -138,7 +138,6 @@ aside {
 /* GO TOP BUTTON EFFECTS AND CLASSES */
 .gotop {
     @include flex-prop(center);
-    align-items: center;
     border: #000;
     @include borders-mixin(5px, 5px);
     box-shadow: 3px -2px teal;
@@ -182,8 +181,8 @@ aside {
     transition: all 0.5s ease;
 
     &:hover {
-        transform: scale(1.05);
-        @extend .shadows;
+        transform: scale(1.01);
+        box-shadow: 0.5px 0.5px 1px #000;
     }
 }
 
@@ -191,9 +190,7 @@ aside {
     position: absolute;
 
     /* center overlay text */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-prop(center);
 
     & h3 {
         color: #fff;
@@ -208,7 +205,8 @@ aside {
     top: 0;
     padding: .5rem;
     margin: 4px;
-    background: $title-highlight-color;
+    background: black;
+    @include borders-mixin(5px, 5px);
 }
 
 .image_wrapper {
@@ -217,7 +215,6 @@ aside {
 
 .offcanvas-portfolio-logos {
     @include flex-prop(center);
-    align-items: center;
 }
 
 /* Responsive layout for Tech using GRIDS (2Col/2Row)*/
@@ -227,23 +224,19 @@ aside {
     }
 
     .responsive1 {
-        grid-column: 1;
-        grid-row: 1;
+        @include grid-position(1, 1);
     }
 
     .responsive2 {
-        grid-column: 2;
-        grid-row: 1;
+        @include grid-position(2, 1);
     }
 
     .responsive3 {
-        grid-column: 1;
-        grid-row: 2;
+        @include grid-position(1, 2);
     }
 
     .responsive4 {
-        grid-column: 2;
-        grid-row: 2;
+        @include grid-position(2, 2);
     }
 
     .tech {

@@ -49,7 +49,7 @@ header {
   transition: transform 0.2s;
 }
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   cursor: url(../assets/img/cursor.png), auto;
 }
 
@@ -70,7 +70,7 @@ header {
 .button::before, .button::after {
   color: transparent;
   border: none;
-  background: #1c1437;
+  background: #142e37;
   transition: transform 0.3s;
   position: absolute;
   left: 0;
@@ -130,6 +130,7 @@ body#top {
 .container-tech {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .tech {
@@ -165,7 +166,7 @@ body#top {
   transition: 0.5s;
 }
 
-.shadows, .portfolio-images:hover {
+.shadows {
   box-shadow: 0 2rem 5rem #fff;
 }
 
@@ -215,6 +216,7 @@ body#top {
 aside {
   display: flex;
   justify-content: right;
+  align-items: right;
   position: sticky;
   bottom: 5px;
 }
@@ -264,15 +266,16 @@ aside {
   transition: all 0.5s ease;
 }
 .portfolio-images:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
+  box-shadow: 0.5px 0.5px 1px #000;
 }
 
 .overlay {
   position: absolute;
   /* center overlay text */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .overlay h3 {
   color: #fff;
@@ -286,7 +289,9 @@ aside {
   top: 0;
   padding: 0.5rem;
   margin: 4px;
-  background: #0b4fd6;
+  background: black;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .image_wrapper {

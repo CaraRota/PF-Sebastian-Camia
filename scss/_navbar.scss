@@ -27,7 +27,7 @@ $navbar-btn-after: (
     text-color: transparent,
     border-btn: none,
     transition: transform .3s,
-    bg-color: #1c1437,
+    bg-color: #142e37,
 );
 
 header {
@@ -50,7 +50,7 @@ header {
     transition: transform .2s;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.01);
         cursor: url(../assets/img/cursor.png), auto;
     }
 }

@@ -2,6 +2,12 @@
 @mixin flex-prop($align) {
     display: flex;
     justify-content: $align;
+    align-items: $align;
+}
+
+@mixin grid-position($column, $row) {
+    grid-column: $column;
+    grid-row: $row;
 }
 
 @mixin text-mixin($color, $font-weight, $font-fam) {
