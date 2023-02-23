@@ -81,7 +81,7 @@ header {
   transform: scale(1, 0);
 }
 .button:hover {
-  color: #fff !important;
+  color: #fff;
   transition: 1s;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -134,7 +134,7 @@ body#top {
 }
 
 .tech {
-  background: radial-gradient(circle, rgb(231, 213, 83) 0%, rgb(53, 70, 73) 81%, rgb(53, 70, 73) 100%);
+  background-image: radial-gradient(circle, rgb(231, 213, 83) 0%, rgb(53, 70, 73) 81%, rgb(53, 70, 73) 100%);
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -150,11 +150,7 @@ body#top {
 
 /* MAIN CONTENT OF THE WEBSITE STARTS HERE WITH THIS WRAPPER/GRID */
 .grid-container {
-  background: #16222A;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3A6073, #16222A);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(to right, #3A6073, #16222A);
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   max-width: 1200px;
@@ -167,7 +163,7 @@ body#top {
 }
 
 .shadows {
-  box-shadow: 0 2rem 5rem #fff;
+  box-shadow: 1px 1px 1rem #000;
 }
 
 /* USING FLEXBOX SOMEWHERE */
@@ -179,7 +175,6 @@ body#top {
   padding: 10px;
 }
 
-/* APPLY EFFECT ON HOVER TO BUTTONS AND/OR BACKGROUNDS (revisit this with SASS later on)  */
 .text-bg-black {
   color: #fff;
   background-color: #212529;
@@ -187,13 +182,13 @@ body#top {
 .text-bg-black:hover {
   color: #212529;
   background-color: #fff;
-  transition: 0.5s;
   border: 1px solid #212529;
+  transition: 0.5s;
 }
 
 .text-bg-white {
-  background-color: #fff;
   color: #212529;
+  background-color: #fff;
   border: 1px solid #212529;
 }
 .text-bg-white:hover {
@@ -226,9 +221,9 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: #000;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border: #000;
   box-shadow: 3px -2px teal;
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   width: 50px;

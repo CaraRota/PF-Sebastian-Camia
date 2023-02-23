@@ -2,6 +2,8 @@
 @import "globals";
 @import "fonts";
 
+// CUSTOMIZE CURSOR ON LOGO HOVERING
+$logo-cursor: url(../assets/img/cursor.png);
 // CUSTOMIZE HEADER
 $header: (
     // CUSTOMIZE BACKGROUND FOR OLDER BROWSERS
@@ -29,6 +31,7 @@ $navbar-btn-after: (
     transition: transform .3s,
     bg-color: #142e37,
 );
+$hover-btn: #fff;
 
 header {
     position: sticky;
@@ -51,7 +54,7 @@ header {
 
     &:hover {
         transform: scale(1.01);
-        cursor: url(../assets/img/cursor.png), auto;
+        cursor: $logo-cursor, auto;
     }
 }
 
@@ -79,7 +82,7 @@ header {
     }
 
     &:hover {
-        color: #fff !important;
+        color: $hover-btn;
         transition: 1s;
         @include borders-mixin(10px, 10px);
     }

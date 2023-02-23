@@ -6,25 +6,51 @@
 @import "mixins";
 @import "fonts";
 
-// CUSTOMIZE BOX SHADOWS IN THE WEBSITE
-$box-shadows: 0 2rem 5rem #fff;
 // CUSTOMIZE SITE BACKGROUND COLOR
 $site-bg-color: linear-gradient(#354649, rgb(122, 121, 121), #fff);
 // CUSTOMIZE TITLE OF THE WEBSITE
 $title-highlight-color: #0b4fd6;
-$title-mixin: (
+$title-map: (
     color: #E0E7E9,
     font-weight: 400,
     font-family: $font-newsreader
 );
-$tech-bg: radial-gradient(circle, rgba(231, 213, 83, 1) 0%, rgba(53, 70, 73, 1) 81%, rgba(53, 70, 73, 1) 100%);
+
+// CUSTOMIZE TECH SECTION OF THE HOMEPAGE
+$tech-specs: (
+    bg-color: radial-gradient(circle, rgba(231, 213, 83, 1) 0%, rgba(53, 70, 73, 1) 81%, rgba(53, 70, 73, 1) 100%),
+    borders: double rgba(53, 70, 73, 1) 10px,
+);
+
+// CUSTOMIZE THE GO TOP BUTTON
+$gotop-mixin: (
+    border: #000,
+    box-shadow: 3px -2px teal,
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%),
+);
+
+// CUSTOMIZE MAIN CONTAINERS AND SHADOWS OF THE WEBSITE
+$box-shadows: 1px 1px 1rem #000;
+$grid-container: linear-gradient(to right, #3A6073, #16222A);
+
+// CUSTOMIZE FOOTER BACKGROUND AND TEXT COLOR
+$footer-map1: (
+    color: #fff,
+    background-color: #212529,
+);
+
+$footer-map2: (
+    color: #212529,
+    background-color: #fff,
+    border: 1px solid #212529,
+);
 
 body#top {
     background-image: $site-bg-color;
 }
 
 .title {
-    @include text-mixin(map-get($map: $title-mixin, $key: color), map-get($map: $title-mixin, $key: font-weight), map-get($map: $title-mixin, $key: font-family));
+    @include text-mixin(map-get($map: $title-map, $key: color), map-get($map: $title-map, $key: font-weight), map-get($map: $title-map, $key: font-family));
     margin-top: 20px;
     text-align: center;
 
@@ -50,14 +76,14 @@ body#top {
 }
 
 .tech {
-    background: $tech-bg;
+    background-image: map-get($map: $tech-specs, $key: bg-color);
     width: 200px;
     height: 200px;
     border-radius: 50%;
     transition: 0.5s;
     margin: 10px;
     padding: 10px;
-    border: double rgba(53, 70, 73, 1) 10px;
+    border: map-get($map: $tech-specs, $key: borders);
 
     &:hover {
         transform: rotate(20deg);
@@ -67,12 +93,7 @@ body#top {
 
 /* MAIN CONTENT OF THE WEBSITE STARTS HERE WITH THIS WRAPPER/GRID */
 .grid-container {
-    background: #16222A;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3A6073, #16222A);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3A6073, #16222A);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: $grid-container;
     @include borders-mixin(10px, 10px);
     max-width: 1200px;
     padding: 10px;
@@ -94,27 +115,26 @@ body#top {
     padding: 10px;
 }
 
-/* APPLY EFFECT ON HOVER TO BUTTONS AND/OR BACKGROUNDS (revisit this with SASS later on)  */
 .text-bg-black {
-    color: #fff;
-    background-color: #212529;
+    color: map-get($map: $footer-map1, $key: color);
+    background-color: map-get($map: $footer-map1, $key: background-color);
 
     &:hover {
-        color: #212529;
-        background-color: #fff;
+        color: map-get($map: $footer-map2, $key: color);
+        background-color: map-get($map: $footer-map2, $key: background-color);
+        border: map-get($map: $footer-map2, $key: border);
         transition: 0.5s;
-        border: 1px solid #212529;
     }
 }
 
 .text-bg-white {
-    background-color: #fff;
-    color: #212529;
-    border: 1px solid #212529;
+    color: map-get($map: $footer-map2, $key: color);
+    background-color: map-get($map: $footer-map2, $key: background-color);
+    border: map-get($map: $footer-map2, $key: border);
 
     &:hover {
-        color: #fff;
-        background-color: #212529;
+        color: map-get($map: $footer-map1, $key: color);
+        background-color: map-get($map: $footer-map1, $key: background-color);
         transition: 0.5s;
     }
 }
@@ -138,10 +158,8 @@ aside {
 /* GO TOP BUTTON EFFECTS AND CLASSES */
 .gotop {
     @include flex-prop(center);
-    border: #000;
     @include borders-mixin(5px, 5px);
-    box-shadow: 3px -2px teal;
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    @include gotop-props(map-get($map: $gotop-mixin, $key: border), map-get($map: $gotop-mixin, $key: box-shadow), map-get($map: $gotop-mixin, $key: background-image));
     width: 50px;
     height: 50px;
     margin-bottom: 5px;
@@ -183,7 +201,7 @@ aside {
     &:hover {
         transform: scale(1.01);
         box-shadow: 0.5px 0.5px 1px #000;
-        
+
     }
 }
 

@@ -1,3 +1,5 @@
+// DO NOT EDIT THIS MIXINS UNLESS YOU KNOW WHAT YOU ARE DOING
+
 // DECLARING DOCUMENTS MIXINS
 @mixin flex-prop($align) {
     display: flex;
@@ -28,4 +30,11 @@
     border: $border;
     background: $bg-color;
     transition: $transition;
+}
+
+// MIXINS FOR THE GO TOP BUTTON
+@mixin gotop-props($border, $box-shadow, $background-image) {
+    border: $border;
+    box-shadow: $box-shadow;
+    background-image: $background-image;
 }
