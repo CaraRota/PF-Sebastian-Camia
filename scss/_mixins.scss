@@ -32,9 +32,15 @@
     transition: $transition;
 }
 
-// MIXINS FOR THE GO TOP BUTTON
+// MIXIN FOR THE GO TOP BUTTON
 @mixin gotop-props($border, $box-shadow, $background-image) {
     border: $border;
     box-shadow: $box-shadow;
     background-image: $background-image;
+}
+
+// MIXIN FOR SQUARED OBJECTS
+@mixin image-sizes($wh){
+    width: $wh;
+    height: $wh;
 }

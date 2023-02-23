@@ -190,6 +190,7 @@ aside {
     color: black;
 }
 
+// CLASSES FOR PORTFOLIO PAGE
 .portfolio-images {
     @include borders-mixin(10px, 10px);
     -webkit-transition: all 0.5s ease;
@@ -235,6 +236,29 @@ aside {
 
 .offcanvas-portfolio-logos {
     @include flex-prop(center);
+}
+
+// CLASSES FOR STAFF PAGE
+
+.staff {
+    @include flex-prop(center);
+    flex-direction: column;
+}
+
+.overlay-content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.overlay-content .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
 }
 
 /* Responsive layout for Tech using GRIDS (2Col/2Row)*/
