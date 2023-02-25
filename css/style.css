@@ -314,6 +314,11 @@ aside {
   max-width: 400px;
 }
 
+.animate__flipInX {
+  animation-delay: 0.3s;
+  animation-duration: 0.8s;
+}
+
 /* Responsive layout for Tech using GRIDS (2Col/2Row)*/
 @media (max-width: 900px) {
   .container-tech {
