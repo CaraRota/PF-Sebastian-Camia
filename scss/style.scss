@@ -266,13 +266,17 @@ aside {
 
 // CLASSES FOR PARTNERS PAGE
 .vh {
-    max-width: 1000px;
+    max-width: 1075px;
 }
 
 .partners-overlay {
     background: map-get($map: $overlays-bg, $key: background1);
     background: map-get($map: $overlays-bg, $key: background2);
     color: map-get($map: $overlays-bg, $key: text-color) !important;
+}
+
+.partners-grid {
+    @include flex-prop(center);
 }
 
 /* Responsive layout for Tech using GRIDS (2Col/2Row)*/
