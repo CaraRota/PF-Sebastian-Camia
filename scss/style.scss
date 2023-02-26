@@ -45,6 +45,13 @@ $footer-map2: (
     border: 1px solid #212529,
 );
 
+// OVERLAYS BACKGROUND FOR STAFF AND PARTNERS PAGES
+$overlays-bg: (
+    background1: rgb(0, 0, 0),
+    background2: rgba(0, 0, 0, 0.5),
+    text-color: #f1f1f1,
+);
+
 body#top {
     background-image: $site-bg-color;
 }
@@ -245,9 +252,9 @@ aside {
 }
 
 .staff-content {
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
+    background: map-get($map: $overlays-bg, $key: background1);
+    background: map-get($map: $overlays-bg, $key: background2);
+    color: map-get($map: $overlays-bg, $key: text-color);
     padding: 20px;
     max-width: 400px;
 }
@@ -255,6 +262,17 @@ aside {
 .animate__flipInX {
     animation-delay: 0.3s;
     animation-duration: 0.8s;
+}
+
+// CLASSES FOR PARTNERS PAGE
+.vh {
+    max-width: 1000px;
+}
+
+.partners-overlay {
+    background: map-get($map: $overlays-bg, $key: background1);
+    background: map-get($map: $overlays-bg, $key: background2);
+    color: map-get($map: $overlays-bg, $key: text-color) !important;
 }
 
 /* Responsive layout for Tech using GRIDS (2Col/2Row)*/
