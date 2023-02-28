@@ -241,14 +241,16 @@ aside {
     position: relative;
 }
 
+// USING EXTEND SOMEWHERE IN THE DOCUMENT
 .offcanvas-portfolio-logos {
-    @include flex-prop(center);
+    @extend .container-tech;
 }
 
 // CLASSES FOR STAFF PAGE
 
+// USING EXTEND SOMEWHERE IN THE DOCUMENT
 .staff {
-    @include flex-prop(center);
+    @extend .container-tech;
 }
 
 .staff-content {

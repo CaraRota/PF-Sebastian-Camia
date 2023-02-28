@@ -7,8 +7,8 @@ ToDos:
 3. Develop Portfolio page [Done]
 4. Develop Staff Page [Done]
 5. Develop Partners Page [Done]
-6. Add comments to html & css []
-7. Use @extend for 3rd part []
+6. Add comments to html & css [Done]
+7. Use @extend for 3rd part [Done]
 
 <!-- SEO Optimization -->
 Meta name="description" content="DescripcionAqui" -> para todas nuestras paginas [Done]
@@ -17,7 +17,6 @@ Poner Titulo unico para cada una de las paginas[Done]
 
 Revisar orden de jerarquia de los encabezados [Done]
 Avisar en comentario que no cambiamos a ES porque el sitio esta en ingles [Done]
-Añadir breadcrumb con Bootstrap
 Crear xml sitemap y guardarlo como sitemap.xml en el root [Done]
 Testear que sea mobile friendly [Done]
 Favicon [Done]

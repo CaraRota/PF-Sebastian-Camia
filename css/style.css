@@ -127,7 +127,7 @@ body#top {
   transform: rotate(-2deg);
 }
 
-.container-tech {
+.container-tech, .staff, .offcanvas-portfolio-logos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,18 +294,6 @@ aside {
   position: relative;
 }
 
-.offcanvas-portfolio-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.staff {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .staff-content {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
@@ -337,7 +325,7 @@ aside {
 
 /* Responsive layout for Tech using GRIDS (2Col/2Row)*/
 @media (max-width: 900px) {
-  .container-tech {
+  .container-tech, .offcanvas-portfolio-logos, .staff {
     display: grid;
   }
   .responsive1 {
