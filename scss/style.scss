@@ -248,9 +248,9 @@ aside {
 
 // CLASSES FOR STAFF PAGE
 
-// USING EXTEND SOMEWHERE IN THE DOCUMENT
 .staff {
-    @extend .container-tech;
+    display: flex;
+    justify-content: center;
 }
 
 .staff-content {

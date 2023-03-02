@@ -127,7 +127,7 @@ body#top {
   transform: rotate(-2deg);
 }
 
-.container-tech, .staff, .offcanvas-portfolio-logos {
+.container-tech, .offcanvas-portfolio-logos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,6 +294,11 @@ aside {
   position: relative;
 }
 
+.staff {
+  display: flex;
+  justify-content: center;
+}
+
 .staff-content {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
@@ -325,7 +330,7 @@ aside {
 
 /* Responsive layout for Tech using GRIDS (2Col/2Row)*/
 @media (max-width: 900px) {
-  .container-tech, .offcanvas-portfolio-logos, .staff {
+  .container-tech, .offcanvas-portfolio-logos {
     display: grid;
   }
   .responsive1 {
