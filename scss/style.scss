@@ -192,11 +192,6 @@ aside {
     background-color: transparent;
 }
 
-.contact-btn-reset .contact-btn-submit {
-    background-color: white;
-    color: black;
-}
-
 // CLASSES FOR PORTFOLIO PAGE
 .portfolio-images {
     @include borders-mixin(10px, 10px);
@@ -241,9 +236,9 @@ aside {
     position: relative;
 }
 
-// USING EXTEND SOMEWHERE IN THE DOCUMENT
 .offcanvas-portfolio-logos {
-    @extend .container-tech;
+    display: flex;
+    justify-content: center;
 }
 
 // CLASSES FOR STAFF PAGE

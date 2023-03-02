@@ -14,20 +14,6 @@ body {
 }
 
 /* BORDERS LAYOUT OF THE WEBSITE (ADDED ARGS BECAUSE NOT EVERY BORDER HAS THE SAME PX)*/
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-}
-
 header {
   position: sticky;
   top: 5px;
@@ -127,7 +113,7 @@ body#top {
   transform: rotate(-2deg);
 }
 
-.container-tech, .offcanvas-portfolio-logos {
+.container-tech {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,11 +236,6 @@ aside {
   background-color: transparent;
 }
 
-.contact-btn-reset .contact-btn-submit {
-  background-color: white;
-  color: black;
-}
-
 .portfolio-images {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -294,6 +275,11 @@ aside {
   position: relative;
 }
 
+.offcanvas-portfolio-logos {
+  display: flex;
+  justify-content: center;
+}
+
 .staff {
   display: flex;
   justify-content: center;
@@ -330,7 +316,7 @@ aside {
 
 /* Responsive layout for Tech using GRIDS (2Col/2Row)*/
 @media (max-width: 900px) {
-  .container-tech, .offcanvas-portfolio-logos {
+  .container-tech {
     display: grid;
   }
   .responsive1 {
